@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "target": "ES6",          // 我們要把 TS 翻譯成 ES6 版本的 JS
+    "module": "None",         // 因為你目前是用 script tag 引入，暫時不使用模組系統
+    "strict": false,          // 剛開始先不要太嚴格，以免挫折感太重，之後再慢慢開
+    "noEmitOnError": true,    // 有錯就不產生檔案，強迫我們修好它
+    "outDir": "./dist",       // 編譯好的 JS 檔會放在這裡 (或者你可以設為 "./js" 直接覆蓋，初學建議先覆蓋)
+    "allowJs": true           // 允許 TS 和 JS 檔案共存
+  },
+  "include": ["ts/**/*"]
+}

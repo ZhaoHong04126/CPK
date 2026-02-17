@@ -1,0 +1,135 @@
+:root {
+    --primary: #4a90e2;
+    --bg: #f4f7f6;
+    --card: #ffffff;
+    --text-main: #333333;
+    --text-sub: #666666;
+    --border: #eeeeee;
+    --danger: #e74c3c;
+    --warning: #f39c12;
+    --input-bg: #ffffff;
+}
+
+[data-theme="dark"] {
+    --primary: #6ab0ff;   
+    --bg: #2c2c2c;        
+    --card: #424242;      
+    --text-main: #ffffff; 
+    --text-sub: #d0d0d0;  
+    --border: #555555;    
+    --danger: #ff867c;    
+    --warning: #ffd54f;
+    --input-bg: #5a5a5a;  
+}
+
+/* 頁面專屬背景設計 (Page Backgrounds) */
+
+/* 預設背景過渡動畫 */
+body {
+    transition: background 0.5s ease;
+    background-attachment: fixed; /* 讓背景固定不隨捲動跑掉 */
+    background-size: cover;
+}
+
+/* 1. 首頁 (Home): 經典的清爽藍白 */
+body[data-page="home"] {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+/* 2. 課表 (Schedule): 充滿活力的天空藍 */
+body[data-page="schedule"] {
+    background: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+}
+
+/* 3. 籤筒 (Lottery): 繽紛派對感 (紫粉色) */
+body[data-page="lottery"] {
+    background: linear-gradient(120deg, #fccb90 0%, #d57eeb 100%);
+}
+
+/* 4. 行事曆 (Calendar): 溫暖的晨曦 (橘黃色) */
+body[data-page="calendar"] {
+    background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+}
+
+/* 5. 成績 (Grade): 象徵成長的清新綠 */
+body[data-page="grade-manager"] {
+    background: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+}
+
+/* 6. 記帳 (Accounting): 富足的金粉色 */
+body[data-page="accounting"] {
+    background: linear-gradient(120deg, #ff9a9e 0%, #fecfef 99%, #fecfef 100%);
+}
+
+/* 7. 筆記 (Notes): 寧靜的紙張米灰 */
+body[data-page="notes"] {
+    background: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+}
+
+/* 8. 紀念日 (Anniversary): 浪漫的紅粉色 */
+body[data-page="anniversary"] {
+    background: linear-gradient(120deg, #ffdde1 0%, #ee9ca7 100%);
+}
+
+/* 9. 學習進度 (Learning): 專注的藍綠色 (Teal) */
+body[data-page="learning"] {
+    background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+}
+
+/* 10. 設定 & 資訊 (Settings/Info): 專業的中性灰 */
+body[data-page="settings"],
+body[data-page="info"],
+body[data-page="notifications"] {
+    background: linear-gradient(to top, #dfe9f3 0%, white 100%);
+}
+
+/* 11. 作業 (Homework): 淡雅的粉紅色 */
+body[data-page="homework"] {
+    background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+}
+
+body.dark-mode[data-page="home"] { background: #1a1a2e; } /* 深藍黑 */
+body.dark-mode[data-page="schedule"] { background: #162447; } /* 深海藍 */
+body.dark-mode[data-page="lottery"] { background: #2d1b36; } /* 深紫 */
+body.dark-mode[data-page="calendar"] { background: #3e2723; } /* 深棕 */
+body.dark-mode[data-page="grade-manager"] { background: #1b2e23; } /* 深綠 */
+body.dark-mode[data-page="accounting"] { background: #331e21; } /* 深紅褐 */
+body.dark-mode[data-page="notes"] { background: #222; } /* 深灰 */
+body.dark-mode[data-page="anniversary"] { background: #3a1c20; } /* 深玫瑰 */
+body.dark-mode[data-page="learning"] { background: #122c2a; } /* 深青 */
+body.dark-mode[data-page="homework"] { background: #1e272e; } /* 深灰藍 */
+body.dark-mode[data-page="settings"],
+body.dark-mode[data-page="info"] { background: #121212; } /* 純黑 */
+
+
+h2 {
+    margin-top: 0;
+    font-size: 1.1rem;
+    border-bottom: 2px solid var(--bg);
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text-main);
+}
+
+.uni-only {
+    display: none;
+}
+
+@keyframes popIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.card {
+    background: var(--card) !important;
+    color: var(--text-main);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}

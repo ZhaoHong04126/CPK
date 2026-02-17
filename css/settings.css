@@ -1,0 +1,38 @@
+#view-info ul {
+    padding-left: 20px;
+    margin: 10px 0;
+}
+#view-info li {
+    margin-bottom: 8px;
+    color: var(--text-sub);
+}
+
+.settings-list {
+    display: flex;
+    flex-direction: column;
+}
+.settings-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5px;
+    border-bottom: 1px solid var(--border);
+    cursor: pointer;
+    transition: background 0.2s;
+    font-size: 1rem;
+    color: var(--text-main);
+}
+.settings-item:last-child {
+    border-bottom: none;
+}
+.settings-item:active {
+    background-color: #f9f9f9;
+}
+.settings-icon {
+    margin-right: 10px;
+    font-size: 1.2rem;
+}
+.settings-arrow {
+    color: #ccc;
+    font-size: 0.9rem;
+}
